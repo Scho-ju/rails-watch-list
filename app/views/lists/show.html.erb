@@ -2,3 +2,5 @@
   <%= @list.name %>
 </div>
 <p>This list contains <%= @list.movies.size %> movies</p>
+
+<%= link_to "add a movie", new_list_bookmark_path(@list) %>
