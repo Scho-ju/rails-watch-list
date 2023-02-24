@@ -1,5 +1,9 @@
-<%= simple_form_for @list do |f| %>
-  <p>enter your lists's name</p>
-  <%= f.text_field :name %>
-  <%= f.submit %>
-<% end %>
+<div class="container pt-5" >
+  <%= simple_form_for @list do |f| %>
+    <p>enter your lists's name</p>
+    <%= f.text_field :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "add new list" %>
+  <% end %>
+  <%= link_to "back", lists_path, class: "btn btn-primary m-5" %>
+</div>
